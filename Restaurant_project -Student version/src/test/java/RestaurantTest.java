@@ -65,4 +65,13 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //TDD test Case
+    @Test
+    public void total_order_value_should_be_returned_as_expected(){
+        restaurant.selectMenuItem("Rice",180);
+        restaurant.selectMenuItem("Rajma",200);
+        assertEquals(380,restaurant.returnOrderValue());
+
+    }
+
 }
